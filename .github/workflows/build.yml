@@ -16,11 +16,11 @@ jobs:
         uses: textbook/git-checkout-submodule-action@master
       - name: 'Install 32-bit dependencies'
         run: sudo apt-get install -y libc6-i386 lib32z1 lib32stdc++6
-      - name: 'Fetch'
+      - name: 'Fetch Source'
         run: git fetch origin master
-      - name: 'checkout Master'
+      - name: 'Checkout Master'
         run: git checkout master
-      - name: 'Merge'
+      - name: 'Merge Source'
         run: git merge master origin/master
       - name: 'Make Auth Key'
         run: ant MakeAuthKey
@@ -28,7 +28,7 @@ jobs:
       - name: 'Clean Build'
         run: ant clean
         working-directory: appinventor
-      - name: 'Build AppyBuilder'
+      - name: 'Build AppInventor'
         run: ant noplay
         working-directory: appinventor
       - name: 'Build Companion'
@@ -39,6 +39,11 @@ jobs:
         with:
           name: MIT AI2 Companion
           path: appinventor/build/buildserver/MIT AI2 Companion.apk
+      - name: 'Upload Companion Full to Artifacts'
+        uses: actions/upload-artifact@v1.0.0
+        with:
+          name: MIT AI2 Companion Full
+          path: appinventor/build/buildserver/MITAI2Companion-full.apk
       - name: 'Run Tests'
         run: ant tests
         working-directory: appinventor
@@ -47,7 +52,7 @@ jobs:
         with:
           name: Test Reports
           path: appinventor/reports
-      - name: 'War Zip'
+      - name: 'Pack War'
         uses: actions/upload-artifact@v1.0.0
         with:
           name: PackWar
