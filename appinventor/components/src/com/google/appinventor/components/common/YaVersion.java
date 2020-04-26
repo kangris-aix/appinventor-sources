@@ -1,6 +1,6 @@
 // -*- mode: java; c-basic-offset: 2; -*-
 // Copyright 2009-2011 Google, All Rights reserved
-// Copyright 2011-2019 MIT, All rights reserved
+// Copyright 2011-2020 MIT, All rights reserved
 // Released under the Apache License, Version 2.0
 // http://www.apache.org/licenses/LICENSE-2.0
 
@@ -508,8 +508,10 @@ public class YaVersion {
   // - SERIAL_COMPONENT_VERSION was initialized to 1
   // For YOUNG_ANDROID_VERSION 205:
   // - BLOCKS_LANGUAGE_VERSION was incremented to 31
+  // For YOUNG_ANDROID_VERSION 206:
+  // - YANDEX_COMPONENT_VERSION was incremented to 2.
 
-  public static final int YOUNG_ANDROID_VERSION = 205;
+  public static final int YOUNG_ANDROID_VERSION = 206;
 
   // ............................... Blocks Language Version Number ...............................
 
@@ -594,9 +596,9 @@ public class YaVersion {
 
   // ................................. Target SDK Version Number ..................................
 
-  public static final int TARGET_SDK_VERSION = 28;
+  public static final int TARGET_SDK_VERSION = 29;
 
-  public static final String TARGET_ANDROID_VERSION = "Android 9.0 Pie";
+  public static final String TARGET_ANDROID_VERSION = "Android 10.0";
 
   // ................................. Component Version Numbers ..................................
 
@@ -1334,7 +1336,9 @@ public class YaVersion {
 
   // For YANDEX_COMPONENT_VERSION 1:
   // - Initial version.
-  public static final int YANDEX_COMPONENT_VERSION = 1;
+  // For YANDEX_COMPONENT_VERSION 2:
+  // - Added ApiKey property
+  public static final int YANDEX_COMPONENT_VERSION = 2;
 
   //For PROXIMITYSENSOR_COMPONENT_VERSION: Initial Version
   public static final int PROXIMITYSENSOR_COMPONENT_VERSION = 1;
@@ -1389,11 +1393,11 @@ public class YaVersion {
 
   public static final String ACCEPTABLE_COMPANION_PACKAGE = "edu.mit.appinventor.aicompanion3";
 
-  public static final String PREFERRED_COMPANION = "2.58";
+  public static final String PREFERRED_COMPANION = "2.58a";
   public static final String COMPANION_UPDATE_URL = "";
   public static final String COMPANION_UPDATE_URL1 = "";
   public static final String COMPANION_UPDATE_EMULATOR_URL = "";
-  public static final String [] ACCEPTABLE_COMPANIONS = { "2.58", "2.58u" };
+  public static final String [] ACCEPTABLE_COMPANIONS = { "2.58a", "2.58au" };
 
   // Splash Screen Values
   public static final int SPLASH_SURVEY = 1;
