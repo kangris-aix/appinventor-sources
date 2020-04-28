@@ -15,7 +15,7 @@ jobs:
       - name: 'Checkout submodules'
         uses: textbook/git-checkout-submodule-action@master
       - name: Update
-        uses: sudo apt update
+        run: sudo apt update
       - name: 'Install 32-bit dependencies'
         run: sudo apt install -y libc6-i386 lib32z1 lib32stdc++6
       - name: 'Fetch Source'
