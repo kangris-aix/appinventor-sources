@@ -111,6 +111,7 @@ public final class Compiler {
   private static final String DEFAULT_VERSION_NAME = "1.0";
   private static final String DEFAULT_MIN_SDK = "7";
   private static final String DEFAULT_THEME = "AppTheme.Light.DarkActionBar";
+  private String simpleCompTypesString="";
 
   /*
    * Resource paths to yail runtime, runtime library files and sdk tools.
@@ -1043,6 +1044,14 @@ public final class Compiler {
           out.write("    </activity>\n");
         }
       }
+      
+      //AdMob
+            if (simpleCompTypesString.contains("AdMob") 
+                    || simpleCompTypesString.contains("RewardedVideo")
+                    || isForCompanion) {
+                out.write("<activity android:name=\"com.google.android.gms.ads.AdActivity\" android:configChanges=\"keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize\"/>");
+                out.write("<meta-data android:name=\"com.google.android.gms.version\" android:value=\"10084000\"/>");
+            }
 
       // Collect any additional <application> subelements into a single set.
       Set<Map.Entry<String, Set<String>>> subelements = Sets.newHashSet();
