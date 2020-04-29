@@ -683,4 +683,22 @@ public interface Images extends Resources {
   */
   @Source("com/google/appinventor/images/YRLogo.png")
   ImageResource YRLogo();
+  
+   /**
+   * Designer palette item: AdMob component
+   */
+  @Source("com/google/appinventor/images/admob.png")
+  ImageResource admob();
+  
+   /**
+   * Designer palette item: admobInterstitial component
+   */
+  @Source("com/google/appinventor/images/admobInterstitial.png")
+  ImageResource admobInterstitial();
+ 
+  /**
+   * Designer palette item: admobInterstitial component
+   */
+  @Source("com/google/appinventor/images/rewardedvideo.png")
+  ImageResource rewardedvideo();
 }
