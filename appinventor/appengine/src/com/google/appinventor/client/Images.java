@@ -690,6 +690,13 @@ public interface Images extends Resources {
   @Source("com/google/appinventor/images/admob.png")
   ImageResource admob();
   
+  /**
+   * Designer item: AdMob component in designer
+   */
+  // The image here is public domain and comes from
+  @Source("com/google/appinventor/images/admobbig.gif")
+  ImageResource admobbig();
+  
    /**
    * Designer palette item: admobInterstitial component
    */
