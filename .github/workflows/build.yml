@@ -1,4 +1,4 @@
-name: 'Try Build'
+name: 'Test Build'
 
 on: push
 
@@ -14,8 +14,10 @@ jobs:
           java-version: 8
       - name: 'Checkout submodules'
         uses: textbook/git-checkout-submodule-action@master
+      - name: Update
+        run: sudo apt update
       - name: 'Install 32-bit dependencies'
-        run: sudo apt-get install -y libc6-i386 lib32z1 lib32stdc++6
+        run: sudo apt install -y libc6-i386 lib32z1 lib32stdc++6
       - name: 'Fetch Source'
         run: git fetch origin master
       - name: 'Checkout Master'
